@@ -10,49 +10,128 @@
     .sub { margin: 0 0 1.5rem 0; opacity: 0.8; }
     h2 { margin-top: 1.75rem; }
     ul { padding-left: 1.2rem; }
-    li { margin: 0.35rem 0; }
+    li { margin: 0.5rem 0; }
     a { text-decoration: none; }
     a:hover { text-decoration: underline; }
-    .note { font-size: 0.95rem; opacity: 0.85; margin-top: 2rem; }
+    .files { font-size: 0.95rem; opacity: 0.9; }
+    .sep { opacity: 0.5; padding: 0 0.35rem; }
     code { background: #f3f3f3; padding: 0.1rem 0.25rem; border-radius: 4px; }
+    .note { font-size: 0.95rem; opacity: 0.85; margin-top: 2rem; }
   </style>
 </head>
 
 <body>
-  <h1>Retificadores — páginas HTML</h1>
-  <p class="sub">Índice de arquivos (GitHub Pages).</p>
+  <h1>Retificadores — páginas HTML + arquivos MATLAB</h1>
+  <p class="sub">Índice de materiais (GitHub Pages). Cada tópico tem a página HTML e o script .m para download.</p>
 
   <h2>Monofásicos — não controlados</h2>
   <ul>
-    <li><a href="meiaOndaR.html">Meia onda — carga R</a> <small>(<code>meiaOndaR.html</code>)</small></li>
-    <li><a href="meiaOndaRc.html">Meia onda — carga RC</a> <small>(<code>meiaOndaRc.html</code>)</small></li>
-    <li><a href="meia_onda_rL.html">Meia onda — carga RL</a> <small>(<code>meia_onda_rL.html</code>)</small></li>
+    <li>
+      <a href="meiaOndaR.html">Meia onda — carga R</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/meia_onda_r.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>meiaOndaR.html</code> / <code>meia_onda_r.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="meiaOndaRc.html">Meia onda — carga RC</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/meia_onda_rc.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>meiaOndaRc.html</code> / <code>meia_onda_rc.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="meia_onda_rL.html">Meia onda — carga RL</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/meia_onda_rL.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>meia_onda_rL.html</code> / <code>meia_onda_rL.m</code>
+      </span>
+    </li>
 
-    <li><a href="completa_RC.html">Onda completa — carga RC</a> <small>(<code>completa_RC.html</code>)</small></li>
-    <li><a href="completa_RL.html">Onda completa — carga RL</a> <small>(<code>completa_RL.html</code>)</small></li>
-    <li><a href="completa_RLE.html">Onda completa — carga RLE</a> <small>(<code>completa_RLE.html</code>)</small></li>
+    <li>
+      <a href="completa_RC.html">Onda completa — carga RC</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/completa_rc.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>completa_RC.html</code> / <code>completa_rc.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="completa_RL.html">Onda completa — carga RL</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/completa_rL.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>completa_RL.html</code> / <code>completa_rL.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="completa_RLE.html">Onda completa — carga RLE</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/completa_rLE.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>completa_RLE.html</code> / <code>completa_rLE.m</code>
+      </span>
+    </li>
   </ul>
 
   <h2>Monofásicos — controlados</h2>
   <ul>
-    <li><a href="completa_R_controlado.html">Onda completa controlado — carga R</a> <small>(<code>completa_R_controlado.html</code>)</small></li>
-    <li><a href="completa_RL_controlado.html">Onda completa controlado — carga RL</a> <small>(<code>completa_RL_controlado.html</code>)</small></li>
+    <li>
+      <a href="completa_R_controlado.html">Onda completa controlado — carga R</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/completa_r_controlado.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>completa_R_controlado.html</code> / <code>completa_r_controlado.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="completa_RL_controlado.html">Onda completa controlado — carga RL</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/completa_rL_controlado.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>completa_RL_controlado.html</code> / <code>completa_rL_controlado.m</code>
+      </span>
+    </li>
   </ul>
 
   <h2>Trifásicos</h2>
   <ul>
-    <li><a href="trifasico_6.html">Retificador trifásico — 6 pulsos</a> <small>(<code>trifasico_6.html</code>)</small></li>
-    <li><a href="trifasico_12.html">Retificador trifásico — 12 pulsos</a> <small>(<code>trifasico_12.html</code>)</small></li>
+    <li>
+      <a href="trifasico_6.html">Retificador trifásico — 6 pulsos</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/trifasico_6.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>trifasico_6.html</code> / <code>trifasico_6.m</code>
+      </span>
+    </li>
+    <li>
+      <a href="trifasico_12.html">Retificador trifásico — 12 pulsos</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/trifasico_12.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>trifasico_12.html</code> / <code>trifasico_12.m</code>
+      </span>
+    </li>
   </ul>
 
   <h2>AFE (retificador ativo)</h2>
   <ul>
-    <li><a href="afe.html">AFE trifásico — conceitos / modelo</a> <small>(<code>afe.html</code>)</small></li>
+    <li>
+      <a href="afe.html">AFE trifásico — conceitos / modelo</a>
+      <span class="files">
+        <span class="sep">•</span>
+        <a href="matlab/AFE.m" download>Baixar .m</a>
+        <span class="sep">•</span><code>afe.html</code> / <code>AFE.m</code>
+      </span>
+    </li>
   </ul>
 
   <p class="note">
-    Dica: para o GitHub Pages abrir automaticamente este índice ao acessar a pasta do site,
-    o arquivo deve se chamar <code>index.html</code> e ficar na raiz do repositório.
+    Organização sugerida: coloque os scripts em <code>matlab/</code>.
+    Se você preferir deixar os <code>.m</code> no root, troque <code>matlab/arquivo.m</code> por <code>arquivo.m</code> nos links.
   </p>
 </body>
 </html>
