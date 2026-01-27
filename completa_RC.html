@@ -1,0 +1,389 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=utf-8"><meta http-equiv="X-UA-Compatible" content="IE=edge,IE=9,chrome=1"><meta name="generator" content="MATLAB 2025a"><title>Untitled</title><style type="text/css">.rtcContent { padding: 30px; } .CodeBlock { background-color: #F5F5F5; margin: 10px 15px 10px 0; display: inline-block; min-width: 100%; }
+.S0 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 0px none rgb(33, 33, 33); border-radius: 4px 4px 0px 0px; padding: 6px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S1 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 0px none rgb(33, 33, 33); border-radius: 0px; padding: 0px 45px 0px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.eoOutputWrapper { width: calc(90vw - 10px) !important; }
+.S2 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 0px none rgb(33, 33, 33); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px; padding: 0px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }
+.S3 { color: rgb(33, 33, 33); padding: 10px 0px 6px 17px; background: rgb(255, 255, 255) none repeat scroll 0% 0% / auto padding-box border-box; font-family: Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px; overflow-x: hidden; line-height: 17.234px;  }
+/* Styling that is common to warnings and errors is in diagnosticOutput.css */.embeddedOutputsErrorElement {    min-height: 18px;    max-height: 550px;}
+.embeddedOutputsErrorElement .diagnosticMessage-errorType {    overflow: auto;}
+.embeddedOutputsErrorElement.activeOutput .eoOutputContent {    user-select: text;    -webkit-user-select: text;}
+.embeddedOutputsErrorElement.activeOutput .eoOutputContent button {    user-select: none;    -webkit-user-select: none;}
+.embeddedOutputsErrorElement .eoOutputContent ::selection {}
+.embeddedOutputsErrorElement.inlineElement {}
+.embeddedOutputsErrorElement.rightPaneElement {}
+/* Styling that is common to warnings and errors is in diagnosticOutput.css */.embeddedOutputsWarningElement {    min-height: 18px;    max-height: 550px;}
+.embeddedOutputsWarningElement .diagnosticMessage-warningType {    overflow: auto;}
+.embeddedOutputsWarningElement.activeOutput .eoOutputContent {    user-select: text;    -webkit-user-select: text;}
+.embeddedOutputsWarningElement .eoOutputContent ::selection {}
+.embeddedOutputsWarningElement.inlineElement {}
+.embeddedOutputsWarningElement.rightPaneElement {}
+/* Copyright 2015-2023 The MathWorks, Inc. *//* In this file, styles are not scoped to rtcContainer since they could be in the Dojo Tooltip */.diagnosticMessage-wrapper {    font-family: Menlo, Monaco, Consolas, "Courier New", monospace;    font-size: 12px;}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType {    /*This fallback value will be used for appdesigner warnings*/    color: var(--rtc-warning-output-color, var(--mw-color-matlabWarning));}
+.diagnosticMessage-wrapper.diagnosticMessage-warningType a {    /*This fallback value will be used for appdesigner warnings*/    color: var(--rtc-warning-output-color, var(--mw-color-matlabWarning));    text-decoration: underline;}
+.rtcThemeDefaultOverride .diagnosticMessage-wrapper.diagnosticMessage-warningType,.rtcThemeDefaultOverride .diagnosticMessage-wrapper.diagnosticMessage-warningType a {    color: var(--mw-color-matlabWarning) !important;}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType {    /*This fallback value will be used in appdesigner error tooltip text*/    color: var(--rtc-error-output-color, var(--mw-color-matlabErrors));}
+.diagnosticMessage-wrapper.diagnosticMessage-errorType a {    /*This fallback value will be used in appdesigner error tooltip text*/    color: var(--rtc-error-output-color, var(--mw-color-matlabErrors));    text-decoration: underline;}
+.rtcThemeDefaultOverride .diagnosticMessage-wrapper.diagnosticMessage-errorType,.rtcThemeDefaultOverride .diagnosticMessage-wrapper.diagnosticMessage-errorType a {    color: var(--mw-color-matlabErrors) !important;}
+.diagnosticMessage-wrapper .diagnosticMessage-messagePart,.diagnosticMessage-wrapper .diagnosticMessage-causePart {    white-space: pre-wrap;}
+.diagnosticMessage-wrapper .diagnosticMessage-stackPart {    white-space: pre;}
+.embeddedOutputsTextElement,.embeddedOutputsVariableStringElement {    white-space: pre;    word-wrap:  initial;    min-height: 18px;    max-height: 550px;}
+.embeddedOutputsTextElement .textElement,.embeddedOutputsVariableStringElement .textElement {    overflow: auto;}
+.embeddedOutputsTextElement.activeOutput .eoOutputContent,.embeddedOutputsVariableStringElement.activeOutput .eoOutputContent {    user-select: text;    -webkit-user-select: text;}
+/*embeddedOutputsTextElement has a different dom structure than embeddedOutputsVariableStringElement.Unlike variableString, the text output has both TEXT nodes and elements as children. Hence we needa selector for each.*/.embeddedOutputsTextElement .eoOutputContent::selection,.embeddedOutputsTextElement .eoOutputContent ::selection,.embeddedOutputsVariableStringElement .eoOutputContent ::selection {}
+.textElement,.rtcDataTipElement .textElement {    padding-top: 2px;}
+.embeddedOutputsTextElement.inlineElement,.embeddedOutputsVariableStringElement.inlineElement {}
+.inlineElement .textElement {}
+.embeddedOutputsTextElement.rightPaneElement,.embeddedOutputsVariableStringElement.rightPaneElement {    min-height: 16px;}
+.rightPaneElement .textElement {    padding-top: 2px;    padding-left: 9px;}
+.S4 { border-left: 1px solid rgb(217, 217, 217); border-right: 1px solid rgb(217, 217, 217); border-top: 1px solid rgb(217, 217, 217); border-bottom: 1px solid rgb(217, 217, 217); border-radius: 0px 0px 4px 4px; padding: 6px 45px 4px 13px; line-height: 18.004px; min-height: 0px; white-space: nowrap; color: rgb(33, 33, 33); font-family: Menlo, Monaco, Consolas, "Courier New", monospace, Menlo, Monaco, Consolas, "Courier New", monospace; font-size: 14px;  }</style></head><body><div class = rtcContent><div class="CodeBlock"><div class="inlineWrapper"><div  class = 'S0'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% Retificador monofásico de ONDA COMPLETA (ponte) + carga R + filtro capacitivo</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Plota: v_s(t), v_rec(t), v_0(t), i_0(t) e i_D(t) (FORÇADO matematicamente)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Cores (ordem): maincolor, lilla, darkgreen, red, yellow</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Eixo x em theta (rad) no recorte, começando em 0 com ticks em múltiplos de pi</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >clear; clc; close </span><span style="color: rgb(167, 9, 245);">all</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Parâmetros ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >f   = 60;           </span><span style="color: rgb(0, 128, 19);">% Hz</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >Vm  = 170;          </span><span style="color: rgb(0, 128, 19);">% Vp</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >R   = 7;           </span><span style="color: rgb(0, 128, 19);">% ohms</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >C   = 670e-6;       </span><span style="color: rgb(0, 128, 19);">% F</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >Vd  = 0.7;          </span><span style="color: rgb(0, 128, 19);">% V (queda por diodo) -&gt; ponte: 2 diodos em condução</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ncy = 12;           </span><span style="color: rgb(0, 128, 19);">% ciclos simulados</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fs  = 200e3;        </span><span style="color: rgb(0, 128, 19);">% Hz</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Tempo ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >T  = 1/f;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >dt = 1/fs;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >t  = 0:dt:(ncy*T);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >N  = numel(t);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Fonte ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >omega = 2*pi*f;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >theta = omega*t;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >v_s   = Vm*sin(theta);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Retificado da ponte (disponível na saída antes do capacitor) ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >v_rec = abs(v_s) - 2*Vd;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >v_rec(v_rec &lt; 0) = 0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Simulação do filtro capacitivo (modelo clamp/descarga) ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Se v_rec &gt; v0_prev =&gt; carrega: v0 = v_rec</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Senão =&gt; descarga em R: v0(k)=v0(k-1)*exp(-dt/(RC))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >v_0 = zeros(1,N);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >k = 2:N</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >v_rec(k) &gt; v_0(k-1)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        v_0(k) = v_rec(k);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        v_0(k) = v_0(k-1)*exp(-dt/(R*C));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Corrente na carga ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >i_0 = v_0 / R;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% ---- Corrente no diodo FORÇADA (matemática), igual ao meia-onda ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Para onda completa, há recarga a cada meio-período (T/2),</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% então usamos picos de |sin| em theta = pi/2 + k*pi.</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >Ipk   = 150;            </span><span style="color: rgb(0, 128, 19);">% &lt;-- pico desejado do pulso (A)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >Delta = 0.02*(T/2);    </span><span style="color: rgb(0, 128, 19);">% &lt;-- meia-largura do pulso (s)  (0.01*(T/2) ... 0.05*(T/2))</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% picos de |sin| (ponte completa): theta = pi/2 + k*pi</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >t_peaks = (pi/2 + pi*(0:ceil(2*ncy)))/omega;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >t_peaks = t_peaks(t_peaks &gt;= t(1) &amp; t_peaks &lt;= t(end));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >i_D = zeros(size(t));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >kk = 1:numel(t_peaks)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    t0  = t_peaks(kk);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    tau = t - t0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    m = abs(tau) &lt;= Delta;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% pulso raised-cosine (máximo 1 no centro)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    g = zeros(size(t));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    g(m) = 0.5*(1 + cos(pi*tau(m)/Delta));   </span><span style="color: rgb(0, 128, 19);">% g(0)=1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    i_D = i_D + Ipk*g;   </span><span style="color: rgb(0, 128, 19);">% todos os pulsos com o mesmo pico</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Paleta (RGB 0..1) ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >statale.maincolor = [0   51  102]/255;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >statale.lilla     = [120 0   80 ]/255;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >statale.darkgreen = [0   70  40 ]/255;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >statale.red       = [190 60  55 ]/255;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >statale.yellow    = [200 155 20 ]/255;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plotColors = [</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    statale.maincolor</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    statale.lilla</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    statale.darkgreen</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    statale.red</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    statale.yellow</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >set(groot,</span><span style="color: rgb(167, 9, 245);">'defaultAxesColorOrder'</span><span >,plotColors);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >LW = 3.0;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% ---- ESCOLHA DO INTERVALO DE CICLOS PARA PLOTAR ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plotCycles = [6 7];     </span><span style="color: rgb(0, 128, 19);">% [ciclo_inicial ciclo_final]</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >c1 = plotCycles(1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >c2 = plotCycles(2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >t1 = (c1-1)*T;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >t2 = c2*T;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >idx = (t &gt;= t1) &amp; (t &lt;= t2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >thetaP = theta(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >thetaRel = thetaP - thetaP(1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >vsP   = v_s(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >vrecP = v_rec(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >v0P   = v_0(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >i0P   = i_0(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >iDP   = i_D(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% ---- Plot ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >figure(</span><span style="color: rgb(167, 9, 245);">'Color'</span><span >,</span><span style="color: rgb(167, 9, 245);">'w'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot(thetaRel, vsP,   </span><span style="color: rgb(167, 9, 245);">'Color'</span><span >, plotColors(1,:), </span><span style="color: rgb(167, 9, 245);">'LineWidth'</span><span >, LW); hold </span><span style="color: rgb(167, 9, 245);">on</span><span >; </span><span style="color: rgb(0, 128, 19);">% maincolor</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot(thetaRel, v0P,   </span><span style="color: rgb(167, 9, 245);">'Color'</span><span >, plotColors(2,:), </span><span style="color: rgb(167, 9, 245);">'LineWidth'</span><span >, LW);          </span><span style="color: rgb(0, 128, 19);">% lilla</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot(thetaRel, i0P,   </span><span style="color: rgb(167, 9, 245);">'Color'</span><span >, plotColors(3,:), </span><span style="color: rgb(167, 9, 245);">'LineWidth'</span><span >, LW);          </span><span style="color: rgb(0, 128, 19);">% darkgreen</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot(thetaRel, vrecP, </span><span style="color: rgb(167, 9, 245);">'Color'</span><span >, plotColors(4,:), </span><span style="color: rgb(167, 9, 245);">'LineWidth'</span><span >, LW);          </span><span style="color: rgb(0, 128, 19);">% red</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plot(thetaRel, iDP,   </span><span style="color: rgb(167, 9, 245);">'Color'</span><span >, plotColors(5,:), </span><span style="color: rgb(167, 9, 245);">'LineWidth'</span><span >, LW);          </span><span style="color: rgb(0, 128, 19);">% yellow</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >grid </span><span style="color: rgb(167, 9, 245);">on</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xlabel(</span><span style="color: rgb(167, 9, 245);">'\theta (rad)'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ylabel(</span><span style="color: rgb(167, 9, 245);">'Tensão (V) / Corrente (A)'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >title(</span><span style="color: rgb(167, 9, 245);">'Retificador monofásico de onda completa (ponte) com carga R e filtro capacitivo'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Ticks em múltiplos de pi a partir de 0 ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xlim([0, thetaRel(end)]);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >k2 = floor(thetaRel(end)/pi);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xt = (0:k2)*pi;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xticks(xt);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >m = 0:k2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >labs = strings(size(m));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >kk = 1:numel(m)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >m(kk) == 0</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        labs(kk) = </span><span style="color: rgb(167, 9, 245);">"0"</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">elseif </span><span >m(kk) == 1</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        labs(kk) = </span><span style="color: rgb(167, 9, 245);">"\pi"</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        labs(kk) = sprintf(</span><span style="color: rgb(167, 9, 245);">'%g\\pi'</span><span >, m(kk));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >xticklabels(labs);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---- Legenda + fontes ----</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >lgd = legend(</span><span style="color: rgb(167, 9, 245);">'v_s(t)'</span><span >,</span><span style="color: rgb(167, 9, 245);">'v_0(t)'</span><span >,</span><span style="color: rgb(167, 9, 245);">'i_0(t)'</span><span >,</span><span style="color: rgb(167, 9, 245);">'v_{rec}(t)'</span><span >,</span><span style="color: rgb(167, 9, 245);">'i_D(t) (forçado)'</span><span >, </span><span style="color: rgb(167, 9, 245);">'Location'</span><span >,</span><span style="color: rgb(167, 9, 245);">'best'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >lgd.FontSize   = 12;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >lgd.FontWeight = </span><span style="color: rgb(167, 9, 245);">'bold'</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >lgd.Color      = </span><span style="color: rgb(167, 9, 245);">'none'</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ax = gca;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ax.XLabel.FontWeight = </span><span style="color: rgb(167, 9, 245);">'bold'</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ax.YLabel.FontWeight = </span><span style="color: rgb(167, 9, 245);">'bold'</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%% =========================</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  5 MP4s a partir do template .fig (sem precisar do script original)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  Template: "completa rc.fig"</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  Resolução de render: 300 dpi (exportgraphics)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  2x mais rápido (metade dos frames)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  V1: anima v_s</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  V2: v_s fixa + anima v_0</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  V3: v_s,v_0 fixas + anima i_0</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  V4: v_s,v_0,i_0 fixas + anima v_{ret}(t)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  V5: v_s,v_0,i_0,v_{ret} fixas + anima i_D</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  OBS: para o HxW ficar coerente com a FIG:</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  - usamos OuterPosition do template</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  - fixamos OuterPosition antes do export</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">%  - normalizamos cada frame para HxW (crop/pad)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% =========================</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >templateFig = </span><span style="color: rgb(167, 9, 245);">"completa rc.fig"</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">if </span><span >~isfile(templateFig)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    error(</span><span style="color: rgb(167, 9, 245);">"Não achei '%s' em %s"</span><span >, templateFig, pwd);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% Config vídeo</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fps     = 30;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >durEach = 10;        </span><span style="color: rgb(0, 128, 19);">% segundos por vídeo (antes do "speed")</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >speed   = 2;         </span><span style="color: rgb(0, 128, 19);">% 2x mais rápido</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >nFrames = max(60, round(durEach*fps/speed));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >resDPI  = 300;       </span><span style="color: rgb(0, 128, 19);">% &lt;-- 300 dpi</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >quality = 100;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >names = [</span><span style="color: rgb(167, 9, 245);">"v_s(t)"</span><span >,</span><span style="color: rgb(167, 9, 245);">"v_0(t)"</span><span >,</span><span style="color: rgb(167, 9, 245);">"i_0(t)"</span><span >,</span><span style="color: rgb(167, 9, 245);">"v_{ret}(t)"</span><span >,</span><span style="color: rgb(167, 9, 245);">"i_D(t)"</span><span >];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >outFiles = [</span><span style="color: rgb(167, 9, 245);">"comp_rc_v1_vs.mp4"</span><span >, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(167, 9, 245);">"comp_rc_v2_v0.mp4"</span><span >, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(167, 9, 245);">"comp_rc_v3_i0.mp4"</span><span >, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(167, 9, 245);">"comp_rc_v4_vret.mp4"</span><span >, </span><span style="color: rgb(14, 0, 255);">...</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(167, 9, 245);">"comp_rc_v5_iD.mp4"</span><span >];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---------- 1) Lê os dados e o OuterPosition direto do .fig (uma vez) ----------</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >fig0 = openfig(templateFig, </span><span style="color: rgb(167, 9, 245);">"new"</span><span >, </span><span style="color: rgb(167, 9, 245);">"invisible"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >drawnow;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >set(fig0,</span><span style="color: rgb(167, 9, 245);">'Units'</span><span >,</span><span style="color: rgb(167, 9, 245);">'pixels'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >outer0 = get(fig0,</span><span style="color: rgb(167, 9, 245);">'OuterPosition'</span><span >);          </span><span style="color: rgb(0, 128, 19);">% [x y w h]</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >outer0(3) = outer0(3) + mod(outer0(3),2);    </span><span style="color: rgb(0, 128, 19);">% w par (H.264)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >outer0(4) = outer0(4) + mod(outer0(4),2);    </span><span style="color: rgb(0, 128, 19);">% h par (H.264)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% acha axes principal (evita axes da legenda)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >axesList = findall(fig0, </span><span style="color: rgb(167, 9, 245);">"Type"</span><span >,</span><span style="color: rgb(167, 9, 245);">"axes"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >ax0 = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >a = axesList(:).'</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >isgraphics(a.XLabel) &amp;&amp; isgraphics(a.YLabel)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        xl = string(a.XLabel.String);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        yl = string(a.YLabel.String);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >contains(xl, </span><span style="color: rgb(167, 9, 245);">"\theta"</span><span >) &amp;&amp; contains(yl, </span><span style="color: rgb(167, 9, 245);">"Tensão"</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            ax0 = a; </span><span style="color: rgb(14, 0, 255);">break</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">if </span><span >isempty(ax0), ax0 = axesList(1); </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >plines0 = findall(ax0, </span><span style="color: rgb(167, 9, 245);">"Type"</span><span >,</span><span style="color: rgb(167, 9, 245);">"line"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >dn0 = string(get(plines0,</span><span style="color: rgb(167, 9, 245);">"DisplayName"</span><span >));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >hs0 = gobjects(1,5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >j = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    idx = find(dn0 == names(j), 1, </span><span style="color: rgb(167, 9, 245);">"first"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >isempty(idx)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        close(fig0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        error(</span><span style="color: rgb(167, 9, 245);">"Não achei a curva '%s' no template (DisplayName)."</span><span >, names(j));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    hs0(j) = plines0(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% dados vindos do .fig</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >X1 = hs0(1).XData(:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >Y  = zeros(numel(X1), 5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >j = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    Y(:,j) = hs0(j).YData(:);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >N = numel(X1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% fixa limites globais (evita autoscale enquanto anima)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >yMin = min(Y(:)); yMax = max(Y(:));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >pad  = 0.05*(yMax - yMin + eps);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >YLimFixed = [yMin-pad, yMax+pad];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >close(fig0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >reveal = @(y,idx) [y(1:idx); nan(N-idx,1)];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(0, 128, 19);">% ---------- 2) Gera 5 vídeos ----------</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">for </span><span >vid = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    fig = openfig(templateFig, </span><span style="color: rgb(167, 9, 245);">"new"</span><span >, </span><span style="color: rgb(167, 9, 245);">"visible"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    drawnow;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% trava tamanho/layout exatamente pelo OuterPosition do template</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(fig,</span><span style="color: rgb(167, 9, 245);">'Units'</span><span >,</span><span style="color: rgb(167, 9, 245);">'pixels'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(fig,</span><span style="color: rgb(167, 9, 245);">'Resize'</span><span >,</span><span style="color: rgb(167, 9, 245);">'off'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(fig,</span><span style="color: rgb(167, 9, 245);">'OuterPosition'</span><span >, outer0);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    drawnow;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% acha axes principal</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    axesList = findall(fig, </span><span style="color: rgb(167, 9, 245);">"Type"</span><span >,</span><span style="color: rgb(167, 9, 245);">"axes"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    ax = [];</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >a = axesList(:).'</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >isgraphics(a.XLabel) &amp;&amp; isgraphics(a.YLabel)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            xl = string(a.XLabel.String);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            yl = string(a.YLabel.String);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">if </span><span >contains(xl, </span><span style="color: rgb(167, 9, 245);">"\theta"</span><span >) &amp;&amp; contains(yl, </span><span style="color: rgb(167, 9, 245);">"Tensão"</span><span >)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >                ax = a; </span><span style="color: rgb(14, 0, 255);">break</span><span >;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >isempty(ax), ax = axesList(1); </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% fixa escala desde o começo</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(ax, </span><span style="color: rgb(167, 9, 245);">'XLim'</span><span >, [X1(1) X1(end)], </span><span style="color: rgb(167, 9, 245);">'XLimMode'</span><span >,</span><span style="color: rgb(167, 9, 245);">'manual'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(ax, </span><span style="color: rgb(167, 9, 245);">'YLim'</span><span >, YLimFixed,       </span><span style="color: rgb(167, 9, 245);">'YLimMode'</span><span >,</span><span style="color: rgb(167, 9, 245);">'manual'</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% acha linhas por DisplayName</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    plines = findall(ax, </span><span style="color: rgb(167, 9, 245);">"Type"</span><span >,</span><span style="color: rgb(167, 9, 245);">"line"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    dn = string(get(plines,</span><span style="color: rgb(167, 9, 245);">"DisplayName"</span><span >));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    hs = gobjects(1,5);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >j = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        idx = find(dn == names(j), 1, </span><span style="color: rgb(167, 9, 245);">"first"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >isempty(idx)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            close(fig);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            error(</span><span style="color: rgb(167, 9, 245);">"Não achei a curva '%s' no template (DisplayName)."</span><span >, names(j));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        hs(j) = plines(idx);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% fixa XData (preserva estilo)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    set(hs, </span><span style="color: rgb(167, 9, 245);">"XData"</span><span >, X1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% estado inicial do vídeo:</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >j = 1:5</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >j &lt; vid</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            set(hs(j), </span><span style="color: rgb(167, 9, 245);">"YData"</span><span >, Y(:,j));       </span><span style="color: rgb(0, 128, 19);">% anteriores completas</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">else</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            set(hs(j), </span><span style="color: rgb(167, 9, 245);">"YData"</span><span >, nan(N,1));     </span><span style="color: rgb(0, 128, 19);">% atual (animará) + futuras vazias</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    drawnow;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% VideoWriter</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    vw = VideoWriter(outFiles(vid), </span><span style="color: rgb(167, 9, 245);">"MPEG-4"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    vw.FrameRate = fps;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    vw.Quality   = quality;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    open(vw);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    cleanupObj = onCleanup(@() close(vw));  </span><span style="color: rgb(0, 128, 19);">% evita MP4 0 KB se der erro</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% temp png único por vídeo</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    tmpPng = fullfile(tempdir, </span><span style="color: rgb(167, 9, 245);">"frame_tmp_" </span><span >+ string(feature(</span><span style="color: rgb(167, 9, 245);">"getpid"</span><span >)) + </span><span style="color: rgb(167, 9, 245);">"_v" </span><span >+ vid + </span><span style="color: rgb(167, 9, 245);">".png"</span><span >);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(0, 128, 19);">% frame teste (define HxW de referência a partir do export)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    exportgraphics(fig, tmpPng, </span><span style="color: rgb(167, 9, 245);">'Resolution'</span><span >, resDPI);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    im0 = imread(tmpPng);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >size(im0,3) == 1, im0 = repmat(im0,1,1,3); </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    H = size(im0,1); W = size(im0,2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">for </span><span >k = 1:nFrames</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        frac = (k-1)/(nFrames-1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        idx  = max(2, round(frac*(N-1)) + 1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        set(hs(vid), </span><span style="color: rgb(167, 9, 245);">"YData"</span><span >, reveal(Y(:,vid), idx));</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        drawnow;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        exportgraphics(fig, tmpPng, </span><span style="color: rgb(167, 9, 245);">'Resolution'</span><span >, resDPI);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        im = imread(tmpPng);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >size(im,3) == 1, im = repmat(im,1,1,3); </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(0, 128, 19);">% normaliza tamanho fixo (crop/pad sem toolbox)</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        im = im(1:min(end,H), 1:min(end,W), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        dh = H - size(im,1);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        dw = W - size(im,2);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">if </span><span >dh &gt; 0 || dw &gt; 0</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            im2 = uint8(255*ones(H, W, 3)); </span><span style="color: rgb(0, 128, 19);">% fundo branco</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            im2(1:size(im,1), 1:size(im,2), :) = im;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >            im = im2;</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        im = im(1:end-mod(size(im,1),2), 1:end-mod(size(im,2),2), :);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >        writeVideo(vw, im);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    </span><span style="color: rgb(14, 0, 255);">if </span><span >exist(tmpPng,</span><span style="color: rgb(167, 9, 245);">'file'</span><span >), delete(tmpPng); </span><span style="color: rgb(14, 0, 255);">end</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    clear </span><span style="color: rgb(167, 9, 245);">cleanupObj</span><span >;  </span><span style="color: rgb(0, 128, 19);">% fecha vw</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    close(fig);</span></span></div></div><div class="inlineWrapper"><div  class = 'S1'>&nbsp;</div></div><div class="inlineWrapper"><div  class = 'S1'><span style="white-space: pre"><span >    disp(</span><span style="color: rgb(167, 9, 245);">"Salvou: " </span><span >+ fullfile(pwd, outFiles(vid)));</span></span></div></div><div class="inlineWrapper outputs"><div  class = 'S2'><span style="white-space: pre"><span style="color: rgb(14, 0, 255);">end</span></span></div><div  class = 'S3'><div class="inlineElement eoOutputWrapper disableDefaultGestureHandling embeddedOutputsFigure" uid="F96DC1B3" prevent-scroll="true" data-testid="output_0" style="width: 798.727px;" tabindex="-1"><div class="outputLayer selectedOutputDecorationLayer doNotExport" aria-hidden="true"></div><div class="outputLayer activeOutputDecorationLayer doNotExport" aria-hidden="true"></div><div class="outputLayer scrollableOutputDecorationLayer doNotExport" aria-hidden="true"></div><div class="outputLayer navigationFocusLayer doNotExport" aria-hidden="false" role="application" tabindex="-1"></div><div class="figureElement eoOutputContent" role="article" aria-roledescription="Use Browse Mode to explore " aria-description="figure output "><div class="figureContainingNode" style="width: 710px; height: 100%; max-width: 100%; display: inline-block;"><div class="GraphicsView" style="width: 100%; height: 100%;"><canvas class="SceneView figureImage" width="710" height="314" style="width: 100%; height: 100%;"><div tabindex="0"></div></canvas></div></div></div></div><div class="inlineElement eoOutputWrapper disableDefaultGestureHandling embeddedOutputsTextElement" uid="D6ED38F7" prevent-scroll="true" data-testid="output_1" style="width: 798.727px; white-space: pre; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;" tabindex="-1"><div class=" textElement eoOutputContent" tabindex="-1" data-previous-available-width="762" data-previous-scroll-height="17" data-hashorizontaloverflow="false" style="max-height: 261px; white-space: pre; font-style: normal; color: rgb(33, 33, 33); font-size: 12px;" role="article" aria-roledescription="Use Browse Mode to explore " aria-description="text output ">Operation terminated by user during startup&gt;@(ax,~)set(ax.Toolbar,'Visible','off') (line 5)</div></div></div></div><div class="inlineWrapper"><div  class = 'S4'>&nbsp;</div></div></div>
+<br>
+<!-- 
+##### SOURCE BEGIN #####
+%% Retificador monofásico de ONDA COMPLETA (ponte) + carga R + filtro capacitivo
+% Plota: v_s(t), v_rec(t), v_0(t), i_0(t) e i_D(t) (FORÇADO matematicamente)
+% Cores (ordem): maincolor, lilla, darkgreen, red, yellow
+% Eixo x em theta (rad) no recorte, começando em 0 com ticks em múltiplos de pi
+
+clear; clc; close all;
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Parâmetros REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+f   = 60;           % Hz
+Vm  = 170;          % Vp
+R   = 7;           % ohms
+C   = 670e-6;       % F
+Vd  = 0.7;          % V (queda por diodo) -> ponte: 2 diodos em condução
+ncy = 12;           % ciclos simulados
+fs  = 200e3;        % Hz
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Tempo REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+T  = 1/f;
+dt = 1/fs;
+t  = 0:dt:(ncy*T);
+N  = numel(t);
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fonte REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+omega = 2*pi*f;
+theta = omega*t;
+v_s   = Vm*sin(theta);
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Retificado da ponte (disponível na saída antes do capacitor) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+v_rec = abs(v_s) - 2*Vd;
+v_rec(v_rec < 0) = 0;
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Simulação do filtro capacitivo (modelo clamp/descarga) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+% Se v_rec > v0_prev => carrega: v0 = v_rec
+% Senão => descarga em R: v0(k)=v0(k-1)*exp(-dt/(RC))
+v_0 = zeros(1,N);
+for k = 2:N
+    if v_rec(k) > v_0(k-1)
+        v_0(k) = v_rec(k);
+    else
+        v_0(k) = v_0(k-1)*exp(-dt/(R*C));
+    end
+end
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Corrente na carga REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+i_0 = v_0 / R;
+
+%% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Corrente no diodo FORÇADA (matemática), igual ao meia-onda REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+% Para onda completa, há recarga a cada meio-período (T/2),
+% então usamos picos de |sin| em theta = pi/2 + k*pi.
+Ipk   = 150;            % <REPLACE_WITH_DASH_DASH pico desejado do pulso (A)
+Delta = 0.02*(T/2);    % <REPLACE_WITH_DASH_DASH meia-largura do pulso (s)  (0.01*(T/2) ... 0.05*(T/2))
+
+% picos de |sin| (ponte completa): theta = pi/2 + k*pi
+t_peaks = (pi/2 + pi*(0:ceil(2*ncy)))/omega;
+t_peaks = t_peaks(t_peaks >= t(1) & t_peaks <= t(end));
+
+i_D = zeros(size(t));
+
+for kk = 1:numel(t_peaks)
+    t0  = t_peaks(kk);
+    tau = t - t0;
+
+    m = abs(tau) <= Delta;
+
+    % pulso raised-cosine (máximo 1 no centro)
+    g = zeros(size(t));
+    g(m) = 0.5*(1 + cos(pi*tau(m)/Delta));   % g(0)=1
+
+    i_D = i_D + Ipk*g;   % todos os pulsos com o mesmo pico
+end
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Paleta (RGB 0..1) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+statale.maincolor = [0   51  102]/255;
+statale.lilla     = [120 0   80 ]/255;
+statale.darkgreen = [0   70  40 ]/255;
+statale.red       = [190 60  55 ]/255;
+statale.yellow    = [200 155 20 ]/255;
+
+plotColors = [
+    statale.maincolor
+    statale.lilla
+    statale.darkgreen
+    statale.red
+    statale.yellow
+];
+set(groot,'defaultAxesColorOrder',plotColors);
+
+LW = 3.0;
+
+%% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH ESCOLHA DO INTERVALO DE CICLOS PARA PLOTAR REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+plotCycles = [6 7];     % [ciclo_inicial ciclo_final]
+c1 = plotCycles(1);
+c2 = plotCycles(2);
+
+t1 = (c1-1)*T;
+t2 = c2*T;
+
+idx = (t >= t1) & (t <= t2);
+
+thetaP = theta(idx);
+thetaRel = thetaP - thetaP(1);
+
+vsP   = v_s(idx);
+vrecP = v_rec(idx);
+v0P   = v_0(idx);
+i0P   = i_0(idx);
+iDP   = i_D(idx);
+
+%% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Plot REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+figure('Color','w');
+plot(thetaRel, vsP,   'Color', plotColors(1,:), 'LineWidth', LW); hold on; % maincolor
+plot(thetaRel, v0P,   'Color', plotColors(2,:), 'LineWidth', LW);          % lilla
+plot(thetaRel, i0P,   'Color', plotColors(3,:), 'LineWidth', LW);          % darkgreen
+plot(thetaRel, vrecP, 'Color', plotColors(4,:), 'LineWidth', LW);          % red
+plot(thetaRel, iDP,   'Color', plotColors(5,:), 'LineWidth', LW);          % yellow
+grid on;
+
+xlabel('\theta (rad)');
+ylabel('Tensão (V) / Corrente (A)');
+title('Retificador monofásico de onda completa (ponte) com carga R e filtro capacitivo');
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Ticks em múltiplos de pi a partir de 0 REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+xlim([0, thetaRel(end)]);
+k2 = floor(thetaRel(end)/pi);
+xt = (0:k2)*pi;
+xticks(xt);
+
+m = 0:k2;
+labs = strings(size(m));
+for kk = 1:numel(m)
+    if m(kk) == 0
+        labs(kk) = "0";
+    elseif m(kk) == 1
+        labs(kk) = "\pi";
+    else
+        labs(kk) = sprintf('%g\\pi', m(kk));
+    end
+end
+xticklabels(labs);
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Legenda + fontes REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+lgd = legend('v_s(t)','v_0(t)','i_0(t)','v_{rec}(t)','i_D(t) (forçado)', 'Location','best');
+lgd.FontSize   = 12;
+lgd.FontWeight = 'bold';
+lgd.Color      = 'none';
+
+ax = gca;
+ax.XLabel.FontWeight = 'bold';
+ax.YLabel.FontWeight = 'bold';
+
+
+%% =========================
+%  5 MP4s a partir do template .fig (sem precisar do script original)
+%  Template: "completa rc.fig"
+%  Resolução de render: 300 dpi (exportgraphics)
+%  2x mais rápido (metade dos frames)
+%  V1: anima v_s
+%  V2: v_s fixa + anima v_0
+%  V3: v_s,v_0 fixas + anima i_0
+%  V4: v_s,v_0,i_0 fixas + anima v_{ret}(t)
+%  V5: v_s,v_0,i_0,v_{ret} fixas + anima i_D
+%
+%  OBS: para o HxW ficar coerente com a FIG:
+%  - usamos OuterPosition do template
+%  - fixamos OuterPosition antes do export
+%  - normalizamos cada frame para HxW (crop/pad)
+% =========================
+
+templateFig = "completa rc.fig";
+if ~isfile(templateFig)
+    error("Não achei '%s' em %s", templateFig, pwd);
+end
+
+% Config vídeo
+fps     = 30;
+durEach = 10;        % segundos por vídeo (antes do "speed")
+speed   = 2;         % 2x mais rápido
+nFrames = max(60, round(durEach*fps/speed));
+resDPI  = 300;       % <REPLACE_WITH_DASH_DASH 300 dpi
+quality = 100;
+
+names = ["v_s(t)","v_0(t)","i_0(t)","v_{ret}(t)","i_D(t)"];
+outFiles = ["comp_rc_v1_vs.mp4", ...
+            "comp_rc_v2_v0.mp4", ...
+            "comp_rc_v3_i0.mp4", ...
+            "comp_rc_v4_vret.mp4", ...
+            "comp_rc_v5_iD.mp4"];
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH 1) Lê os dados e o OuterPosition direto do .fig (uma vez) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+fig0 = openfig(templateFig, "new", "invisible");
+drawnow;
+
+set(fig0,'Units','pixels');
+outer0 = get(fig0,'OuterPosition');          % [x y w h]
+outer0(3) = outer0(3) + mod(outer0(3),2);    % w par (H.264)
+outer0(4) = outer0(4) + mod(outer0(4),2);    % h par (H.264)
+
+% acha axes principal (evita axes da legenda)
+axesList = findall(fig0, "Type","axes");
+ax0 = [];
+for a = axesList(:).'
+    if isgraphics(a.XLabel) && isgraphics(a.YLabel)
+        xl = string(a.XLabel.String);
+        yl = string(a.YLabel.String);
+        if contains(xl, "\theta") && contains(yl, "Tensão")
+            ax0 = a; break;
+        end
+    end
+end
+if isempty(ax0), ax0 = axesList(1); end
+
+plines0 = findall(ax0, "Type","line");
+dn0 = string(get(plines0,"DisplayName"));
+
+hs0 = gobjects(1,5);
+for j = 1:5
+    idx = find(dn0 == names(j), 1, "first");
+    if isempty(idx)
+        close(fig0);
+        error("Não achei a curva '%s' no template (DisplayName).", names(j));
+    end
+    hs0(j) = plines0(idx);
+end
+
+% dados vindos do .fig
+X1 = hs0(1).XData(:);
+Y  = zeros(numel(X1), 5);
+for j = 1:5
+    Y(:,j) = hs0(j).YData(:);
+end
+N = numel(X1);
+
+% fixa limites globais (evita autoscale enquanto anima)
+yMin = min(Y(:)); yMax = max(Y(:));
+pad  = 0.05*(yMax - yMin + eps);
+YLimFixed = [yMin-pad, yMax+pad];
+
+close(fig0);
+
+reveal = @(y,idx) [y(1:idx); nan(N-idx,1)];
+
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH 2) Gera 5 vídeos REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+for vid = 1:5
+    fig = openfig(templateFig, "new", "visible");
+    drawnow;
+
+    % trava tamanho/layout exatamente pelo OuterPosition do template
+    set(fig,'Units','pixels');
+    set(fig,'Resize','off');
+    set(fig,'OuterPosition', outer0);
+    drawnow;
+
+    % acha axes principal
+    axesList = findall(fig, "Type","axes");
+    ax = [];
+    for a = axesList(:).'
+        if isgraphics(a.XLabel) && isgraphics(a.YLabel)
+            xl = string(a.XLabel.String);
+            yl = string(a.YLabel.String);
+            if contains(xl, "\theta") && contains(yl, "Tensão")
+                ax = a; break;
+            end
+        end
+    end
+    if isempty(ax), ax = axesList(1); end
+
+    % fixa escala desde o começo
+    set(ax, 'XLim', [X1(1) X1(end)], 'XLimMode','manual');
+    set(ax, 'YLim', YLimFixed,       'YLimMode','manual');
+
+    % acha linhas por DisplayName
+    plines = findall(ax, "Type","line");
+    dn = string(get(plines,"DisplayName"));
+
+    hs = gobjects(1,5);
+    for j = 1:5
+        idx = find(dn == names(j), 1, "first");
+        if isempty(idx)
+            close(fig);
+            error("Não achei a curva '%s' no template (DisplayName).", names(j));
+        end
+        hs(j) = plines(idx);
+    end
+
+    % fixa XData (preserva estilo)
+    set(hs, "XData", X1);
+
+    % estado inicial do vídeo:
+    for j = 1:5
+        if j < vid
+            set(hs(j), "YData", Y(:,j));       % anteriores completas
+        else
+            set(hs(j), "YData", nan(N,1));     % atual (animará) + futuras vazias
+        end
+    end
+    drawnow;
+
+    % VideoWriter
+    vw = VideoWriter(outFiles(vid), "MPEG-4");
+    vw.FrameRate = fps;
+    vw.Quality   = quality;
+    open(vw);
+    cleanupObj = onCleanup(@() close(vw));  % evita MP4 0 KB se der erro
+
+    % temp png único por vídeo
+    tmpPng = fullfile(tempdir, "frame_tmp_" + string(feature("getpid")) + "_v" + vid + ".png");
+
+    % frame teste (define HxW de referência a partir do export)
+    exportgraphics(fig, tmpPng, 'Resolution', resDPI);
+    im0 = imread(tmpPng);
+    if size(im0,3) == 1, im0 = repmat(im0,1,1,3); end
+    H = size(im0,1); W = size(im0,2);
+
+    for k = 1:nFrames
+        frac = (k-1)/(nFrames-1);
+        idx  = max(2, round(frac*(N-1)) + 1);
+
+        set(hs(vid), "YData", reveal(Y(:,vid), idx));
+        drawnow;
+
+        exportgraphics(fig, tmpPng, 'Resolution', resDPI);
+        im = imread(tmpPng);
+        if size(im,3) == 1, im = repmat(im,1,1,3); end
+
+        % normaliza tamanho fixo (crop/pad sem toolbox)
+        im = im(1:min(end,H), 1:min(end,W), :);
+        dh = H - size(im,1);
+        dw = W - size(im,2);
+        if dh > 0 || dw > 0
+            im2 = uint8(255*ones(H, W, 3)); % fundo branco
+            im2(1:size(im,1), 1:size(im,2), :) = im;
+            im = im2;
+        end
+        im = im(1:end-mod(size(im,1),2), 1:end-mod(size(im,2),2), :);
+
+        writeVideo(vw, im);
+    end
+
+    if exist(tmpPng,'file'), delete(tmpPng); end
+    clear cleanupObj;  % fecha vw
+    close(fig);
+
+    disp("Salvou: " + fullfile(pwd, outFiles(vid)));
+end
+##### SOURCE END #####
+-->
+</div></body></html>
