@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="pt-br">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Retificadores — índice</title>
+  <style>
+    body { font-family: system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height: 1.5; margin: 2rem; }
+    h1 { margin: 0 0 0.25rem 0; }
+    .sub { margin: 0 0 1.5rem 0; opacity: 0.8; }
+    h2 { margin-top: 1.75rem; }
+    ul { padding-left: 1.2rem; }
+    li { margin: 0.35rem 0; }
+    a { text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    .note { font-size: 0.95rem; opacity: 0.85; margin-top: 2rem; }
+    code { background: #f3f3f3; padding: 0.1rem 0.25rem; border-radius: 4px; }
+  </style>
+</head>
+
+<body>
+  <h1>Retificadores — páginas HTML</h1>
+  <p class="sub">Índice de arquivos (GitHub Pages).</p>
+
+  <h2>Monofásicos — não controlados</h2>
+  <ul>
+    <li><a href="meiaOndaR.html">Meia onda — carga R</a> <small>(<code>meiaOndaR.html</code>)</small></li>
+    <li><a href="meiaOndaRc.html">Meia onda — carga RC</a> <small>(<code>meiaOndaRc.html</code>)</small></li>
+    <li><a href="meia_onda_rL.html">Meia onda — carga RL</a> <small>(<code>meia_onda_rL.html</code>)</small></li>
+
+    <li><a href="completa_RC.html">Onda completa — carga RC</a> <small>(<code>completa_RC.html</code>)</small></li>
+    <li><a href="completa_RL.html">Onda completa — carga RL</a> <small>(<code>completa_RL.html</code>)</small></li>
+    <li><a href="completa_RLE.html">Onda completa — carga RLE</a> <small>(<code>completa_RLE.html</code>)</small></li>
+  </ul>
+
+  <h2>Monofásicos — controlados</h2>
+  <ul>
+    <li><a href="completa_R_controlado.html">Onda completa controlado — carga R</a> <small>(<code>completa_R_controlado.html</code>)</small></li>
+    <li><a href="completa_RL_controlado.html">Onda completa controlado — carga RL</a> <small>(<code>completa_RL_controlado.html</code>)</small></li>
+  </ul>
+
+  <h2>Trifásicos</h2>
+  <ul>
+    <li><a href="trifasico_6.html">Retificador trifásico — 6 pulsos</a> <small>(<code>trifasico_6.html</code>)</small></li>
+    <li><a href="trifasico_12.html">Retificador trifásico — 12 pulsos</a> <small>(<code>trifasico_12.html</code>)</small></li>
+  </ul>
+
+  <h2>AFE (retificador ativo)</h2>
+  <ul>
+    <li><a href="afe.html">AFE trifásico — conceitos / modelo</a> <small>(<code>afe.html</code>)</small></li>
+  </ul>
+
+  <p class="note">
+    Dica: para o GitHub Pages abrir automaticamente este índice ao acessar a pasta do site,
+    o arquivo deve se chamar <code>index.html</code> e ficar na raiz do repositório.
+  </p>
+</body>
+</html>
