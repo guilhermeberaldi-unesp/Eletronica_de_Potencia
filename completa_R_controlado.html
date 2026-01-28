@@ -21,7 +21,7 @@ R       = 10;          % ohms
 alpha_d = 90;          % graus
 ncy     = 3;           % ciclos (2*pi por ciclo)
 Ns      = 200000;      % pontos
-pw_d    = 8;           % largura do pulso em graus (no eixo theta)  <REPLACE_WITH_DASH_DASH ajuste aqui
+pw_d    = 8;           % largura do pulso em graus (no eixo theta)
 A_gate  = 1;           % amplitude do pulso
 
 alpha = deg2rad(alpha_d);
@@ -33,13 +33,13 @@ theta = linspace(0, 2*pi*ncy, Ns);
 % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Fonte REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
 v_s = Vm*sin(theta);
 
-% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Ponte controlada com carga R (modelo didático) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Ponte controlada com carga R REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
 phi  = mod(theta, pi);
 cond = (phi >= alpha) & (phi <= pi);
 v0   = abs(v_s) .* cond;
 i0   = v0 / R;
 
-% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Valor médio (equação pedida) REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
+% REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Valor médio  REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
 Vmed = 10;
 
 % REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH Instantes de disparo REPLACE_WITH_DASH_DASHREPLACE_WITH_DASH_DASH
