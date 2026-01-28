@@ -11,13 +11,7 @@
 <!-- 
 ##### SOURCE BEGIN #####
 %% Retificador trifásico 6 pulsos (ponte de diodos) + carga RL
-% Ajuste solicitado:
-%  - Plotar as TENSÕES RETIFICADAS TRIFÁSICAS (associadas a cada par de diodos) na MESMA cor
-%  - Em OUTRA cor, as TENSÕES DE LINHA TRIFÁSICAS (v_ab, v_bc, v_ca)
-%  - E também v_0(t) (na carga RL) e i_0(t) (na carga RL)
-%
-% Cores (ordem): maincolor, lilla, darkgreen, red, yellow
-% Eixo x em theta (rad) com ticks em múltiplos de pi, começando em 0 no recorte
+
 
 clear; clc; %close all;
 
@@ -159,9 +153,7 @@ lgd.Color      = 'none';
 ax = gca;
 ax.XLabel.FontWeight = 'bold';
 ax.YLabel.FontWeight = 'bold';
-%% REPLACE_WITH_DASH_DASH- ADENDO: correntes de fase da fonte CA (em outra figura) REPLACE_WITH_DASH_DASH-
-% Aproximação típica para retificador 6 pulsos com corrente DC quase contínua:
-% a corrente de fase é +i0 quando a fase é a MAIOR, -i0 quando é a MENOR, e 0 caso contrário.
+
 
 Vmat = [v_a; v_b; v_c];
 [~, idxMax] = max(Vmat, [], 1);
@@ -180,7 +172,7 @@ i_b(idxMin==2) = -i_0(idxMin==2);
 i_c(idxMax==3) =  i_0(idxMax==3);
 i_c(idxMin==3) = -i_0(idxMin==3);
 
-% Recorte (mesmo intervalo já usado)
+% Recorte 
 iaP = i_a(idx);
 ibP = i_b(idx);
 icP = i_c(idx);
@@ -209,7 +201,7 @@ ax2.XLabel.FontWeight = 'bold';
 ax2.YLabel.FontWeight = 'bold';
 
 
-%% REPLACE_WITH_DASH_DASH- Só a fase A (i_a) em outra figura REPLACE_WITH_DASH_DASH-
+
 figure('Color','w');
 plot(thetaRel, iaP, 'Color', plotColors(3,:), 'LineWidth', LW); hold on;
 grid on;
