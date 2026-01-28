@@ -11,7 +11,13 @@
 <!-- 
 ##### SOURCE BEGIN #####
 %% Retificador trifásico 12 pulsos (2 pontes de 6 pulsos defasadas de 30°) + carga RL
-
+% Pedido (igual ao 6 pulsos, mas para 12 pulsos):
+%  - Tensões retificadas trifásicas (de CADA secundário) na MESMA cor
+%  - Tensões de linha trifásicas (de CADA secundário) em OUTRA cor
+%  - v0(t) na carga RL e i0(t) na carga RL
+%  - Adendo: correntes de fase da fonte CA (2ª figura), uma para cada secundário
+%
+% Observação: modelo ilustrativo (12 pulsos via soma de 2 saídas de 6 pulsos com defasagem de 30°)
 
 %clear; clc; %close all;
 
@@ -207,7 +213,10 @@ ax.XLabel.FontWeight = 'bold';
 ax.YLabel.FontWeight = 'bold';
 
 %% =========================
-
+% ADENDO (FIGURA 2): correntes de fase da fonte CA (uma figura, 2 subplots)
+% =========================
+% Aproximação típica (corrente DC quase contínua):
+% Para cada secundário: fase "max" injeta +i_bridge, fase "min" injeta -i_bridge, demais 0.
 
 % REPLACE_WITH_DASH_DASH- Secundário 1 REPLACE_WITH_DASH_DASH-
 Vmat1 = [v_a1; v_b1; v_c1];
@@ -264,6 +273,9 @@ lg2.FontSize = 12; lg2.FontWeight='bold'; lg2.Color='none';
 
 linkaxes([axA axB],'x');
 
+
+%% REPLACE_WITH_DASH_DASH- Só a fase A no 12 pulsos (uma figura com 2 curvas: secundário 1 e 2) REPLACE_WITH_DASH_DASH-
+% (assume que você já calculou e recortou: ia1P e ia2P, além de thetaRel, xt, labs, LW, plotColors)
 
 figure('Color','w');
 plot(thetaRel, ia1P, 'Color', plotColors(3,:), 'LineWidth', LW); hold on;
