@@ -91,10 +91,10 @@ i0P    = i0(idx);
 vretP  = v_ret(idx);
 gateP  = gate(idx);
 
-% eixo x relativo no recorte
+
 thetaRel = thetaP - thetaP(1);
 
-% instantes de disparo dentro do recorte (e relativos)
+
 inWin = (theta_fire >= thetaP(1)) & (theta_fire <= thetaP(end));
 theta_fire_rel = theta_fire(inWin) - thetaP(1);
 
@@ -121,7 +121,7 @@ text(0.02*thetaRel(end), 0.92*max(vretP+eps), txt, ...
     'Interpreter','latex', 'FontWeight','bold', 'FontSize', 12, ...
     'VerticalAlignment','top');
 
-% Linhas verticais pontilhadas (sincronia)
+
 for kk = 1:numel(theta_fire_rel)
     xline(theta_fire_rel(kk), ':k', 'LineWidth', 1.5);
 end
